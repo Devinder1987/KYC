@@ -1,7 +1,8 @@
 from flask import Flask
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)  # Allow all origins
 @app.route("/")
 def home():
     return "Flask API is running!"
